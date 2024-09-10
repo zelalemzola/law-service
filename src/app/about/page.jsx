@@ -49,7 +49,7 @@ const AboutPage = () => {
          <div className='md:w-[60%] flex flex-col items-center justify-center gap-6'>
           <h1 className='text-primary text-4xl md:text-6xl'>About <span className='text-secondary'>Our Firm</span></h1>
           <p className='text-lg text-center'>We work closely with our clients throughout every stage of what is usually a long and tough ordeal so that they can accomplish their goals and desires. With our combined experience of handling complex trials and litigations for over 30 years, you can trust us to be forthright and diligent in meeting your needs.</p>
-          <Link href='/' className='text-white bg-primary text-lg py-2 px-6 rounded-xl flex items-center gap-2 shadow-md hover:shadow-2xl hover:gap-4'>Learn More  <ArrowRight /></Link>
+         
          </div>
          <div className='hidden md:flex items-center justify-center'>
           <Image src='/lawabout.png' alt='about image' width={900} height={900} className='h-[100%] w-[100%] scale-[120%]' />

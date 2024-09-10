@@ -57,7 +57,7 @@ const ContactPage = () => {
             <p className='bg-white p-2 w-[80%] text-black text-center rounded-2xl '>Addis Ababa, Bole Atlas</p>
             <p className='bg-white p-2 w-[80%] text-black text-center rounded-2xl '>0943902245</p>
             <p className='bg-white p-2 w-[80%] text-black text-center rounded-2xl '>abrillawfirm@gmail.com</p>
-            <Link href='/' className='bg-secondary p-3 w-fit text-white shadow-md  hover:shadow-2xl rounded-2xl text-center flex items-center gap-3 hover:bg-white hover:text-black transition duration-700 ease-in-out'>Contact Us<ArrowRight/></Link>
+          
          </div>
          <div className='md:w-[50%] flex items-center md:items-start justify-center flex-col gap-10 '>
              <h1 className='text-white text-3xl font-bold'>Business Hours</h1>
@@ -72,12 +72,14 @@ const ContactPage = () => {
          </div>
         </div>
         <div className='w-full py-[5%] px-[5%]'>
-          <h1 className='text-primary text-5xl font-bold mb-[10%] md:mb-[5%]'>Sina Law</h1>
+          <h1 className='text-primary text-5xl font-bold mb-[2%] md:mb-[5%]'>Sina Law</h1>
+             <hr className='w-full border-primary border-1 mb-[10%] md:mb-[5%]'/>
           <h1 className='text-primary text-4xl font-bold'>Meet Our Gig Workers</h1>
           <div className='flex flex-col md:flex-row items-center justify-between my-[2%] gap-5 md:gap-0'>
           <p className='text-lg md:w-[60%]'>We provide you with direct and expert legal careso that you can resolve issues early and amicably.so that you can resolve issues early and amicably.</p>
           <Link href='/' className='bg-primary py-3 px-6 rounded-xl flex items-center gap-3 text-white'><Search/> Gig Workers</Link>
           </div>
+             <hr className='w-full border-primary border-1 mb-[10%] md:mb-[5%]'/>
           <h1 className='text-primary text-4xl font-bold my-[5%]'>Contact Us</h1>
           <div className='flex items-center text-2xl  gap-20 flex-wrap my-[2%] px-[1%]'>
             <Instagram className='text-lg text-white bg-primary p-1  font-bold scale-[200%]' />
