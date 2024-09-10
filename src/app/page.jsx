@@ -57,13 +57,13 @@ const HomePage = () => {
          <h1 className='hidden md:block md:text-6xl '>Solving your <br/>problems head-on</h1>
          <h1 className='text-4xl md:hidden font-bold text-center my-[20%]'>Solving your problems head-on</h1>
          <p className='text-xl md:w-[50%] my-6'>We provide you with direct and expert legal care so that you can resolve issues early and amicably.</p>
-         <Link href='/' className='bg-primary py-3 px-6 rounded-xl shadow-md hover:shadow-2xl hover:bg-secondary text-white text-lg transition duration-700 ease-in-out '>Contact Us</Link>
+         <Link href='/contact' className='bg-primary py-3 px-6 rounded-xl shadow-md hover:shadow-2xl hover:bg-secondary text-white text-lg transition duration-700 ease-in-out '>Contact Us</Link>
         </div>
         <div className='w-full md:h-screen py-[10%] px-[10%] flex gap-20'>
          <div className='md:w-[60%] flex flex-col items-center justify-center gap-6'>
           <h1 className='text-primary text-4xl md:text-6xl'>About <span className='text-secondary'>Our Firm</span></h1>
           <p className='text-lg text-center'>We work closely with our clients throughout every stage of what is usually a long and tough ordeal so that they can accomplish their goals and desires. With our combined experience of handling complex trials and litigations for over 30 years, you can trust us to be forthright and diligent in meeting your needs.</p>
-          <Link href='/' className='text-white bg-primary text-lg py-2 px-6 rounded-xl flex items-center gap-2 shadow-md hover:shadow-2xl hover:gap-4'>Learn More  <ArrowRight /></Link>
+          <Link href='/about' className='text-white bg-primary text-lg py-2 px-6 rounded-xl flex items-center gap-2 shadow-md hover:shadow-2xl hover:gap-4'>Learn More  <ArrowRight /></Link>
          </div>
          <div className='hidden md:flex items-center justify-center'>
           <Image src='/lawabout.png' alt='about image' width={900} height={900} className='h-[100%] w-[100%] scale-[120%]' />
@@ -218,7 +218,7 @@ const HomePage = () => {
             <p className='bg-white p-2 w-[80%] text-black text-center rounded-2xl '>Addis Ababa, Bole Atlas</p>
             <p className='bg-white p-2 w-[80%] text-black text-center rounded-2xl '>0943902245</p>
             <p className='bg-white p-2 w-[80%] text-black text-center rounded-2xl '>abrillawfirm@gmail.com</p>
-            <Link href='/' className='bg-secondary p-3 w-fit text-white shadow-md  hover:shadow-2xl rounded-2xl text-center flex items-center gap-3 hover:bg-white hover:text-black transition duration-700 ease-in-out'>Contact Us<ArrowRight/></Link>
+            <Link href='/contact' className='bg-secondary p-3 w-fit text-white shadow-md  hover:shadow-2xl rounded-2xl text-center flex items-center gap-3 hover:bg-white hover:text-black transition duration-700 ease-in-out'>Contact Us<ArrowRight/></Link>
          </div>
          <div className='md:w-[50%] flex items-center md:items-start justify-center flex-col gap-10 '>
              <h1 className='text-white text-3xl font-bold'>Business Hours</h1>
@@ -238,7 +238,7 @@ const HomePage = () => {
           <h1 className='text-primary text-4xl font-bold'>Meet Our Gig Workers</h1>
           <div className='flex flex-col md:flex-row items-center justify-between my-[2%] gap-5 md:gap-0'>
           <p className='text-lg md:w-[60%]'>We provide you with direct and expert legal careso that you can resolve issues early and amicably.so that you can resolve issues early and amicably.</p>
-          <Link href='/' className='bg-primary py-3 px-6 rounded-xl flex items-center gap-3 text-white'><Search/> Gig Workers</Link>
+          <Link href='/workers' className='bg-primary py-3 px-6 rounded-xl flex items-center gap-3 text-white'><Search/> Gig Workers</Link>
           </div>
           <hr className='w-full border-primary border-1 mb-[10%] md:mb-[5%]'/>
           <h1 className='text-primary text-4xl font-bold my-[5%]'>Contact Us</h1>
