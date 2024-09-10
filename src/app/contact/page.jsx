@@ -10,20 +10,61 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer"
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
+} from "@/components/ui/navigation-menu"
+
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 const ContactPage = () => {
+      const services = [
+  {
+    title: "Mediation",
+    href: "/services#mediation",
+   
+  },
+  {
+    title: "Family Case",
+    href: "/services#family",
+  
+  },
+  {
+    title: "Succession",
+    href: "/services#succession",
+   
+  },
+  {
+    title: "Tax",
+    href: "/services#tax",
+
+  },
+  {
+    title: "Employment Law",
+    href: "/services#employment",
+
+  },
+  {
+    title: "Contract",
+    href: "/services#contract",
+   
+  },
+  {
+    title: "View All",
+    href: "/services",
+   
+  },
+]
   return (
     <div>
-         <div className='fixed w-full py-1 px-10 md:px-20 flex items-center justify-between bg-white z-30 rounded-b-xl'>
+          <div className='fixed w-full py-1 px-10 md:px-20 flex items-center justify-between bg-white z-30 rounded-b-xl'>
             <h1 className='text-3xl text-primary font-bold'>Sina Law</h1>
-            <div className='hidden md:flex items-center gap-10'>
-                <Link href='/' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out'>Home</Link>
-                <Link href='/services' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out'>Services</Link>
-                <Link href='/about' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out'>About</Link>
-                <Link href='/contact' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out'>Contact Us</Link>
-                <Link href='/workers' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out flex items-center gap-2'><Search />Gig Workers</Link>
-            </div>
             <div className='flex md:hidden'>
                             <Drawer>
                 <DrawerTrigger>
@@ -50,7 +91,39 @@ const ContactPage = () => {
                 </DrawerContent>
               </Drawer>
             </div>
-        </div>
+            <div className='hidden md:flex items-center gap-10'>
+                <Link href='/' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out'>Home</Link>
+                 <NavigationMenu>
+                  <NavigationMenuList >
+                     <NavigationMenuItem>
+                          <NavigationMenuTrigger>
+                            <p className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out'>Services</p>
+                          </NavigationMenuTrigger>
+                          <NavigationMenuContent>
+                            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                              {services.map((component) => (
+                                <div
+                                  key={component.title}
+                                  
+                                  className='p-2 border-1 shadow-lg flex flex-col gap-2'
+                                  
+                                >
+                                  <h1 className='text-xl text-primary font-bold'>{component.title}</h1>
+                                 
+                                  <Link href={component.href} className='flex items-center gap-2 bg-primary text-white w-fit p-2 rounded-xl'>View Detail<ArrowRight/></Link>
+                                </div>
+                              ))}
+                            </ul>
+                          </NavigationMenuContent>
+                        </NavigationMenuItem>
+                  </NavigationMenuList>
+                </NavigationMenu>
+                <Link href='/about' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out'>About</Link>
+                <Link href='/contact' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out'>Contact Us</Link>
+                <Link href='/workers' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out flex items-center gap-2'><Search />Gig Workers</Link>
+             
+             </div>
+            </div>
          <div className='w-full md:h-screen py-[20%] md:py-[10%] px-[3%] bg-primary flex flex-col gap-10 md:gap-0 md:flex-row'>
          <div className='md:w-[50%] flex items-center md:items-start justify-center gap-8 flex-col'>
             <h1 className='text-white text-3xl font-bold'>Let's Talk</h1>
@@ -89,6 +162,17 @@ const ContactPage = () => {
 
           </div>
         </div>
+        <NavigationMenu>
+  <NavigationMenuList>
+    <NavigationMenuItem>
+      <NavigationMenuTrigger>Item One</NavigationMenuTrigger>
+      <NavigationMenuContent>
+        <NavigationMenuLink>Link</NavigationMenuLink>
+      </NavigationMenuContent>
+    </NavigationMenuItem>
+  </NavigationMenuList>
+</NavigationMenu>
+
     </div>
   )
 }

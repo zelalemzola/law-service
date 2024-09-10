@@ -11,21 +11,60 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer"
-
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
+} from "@/components/ui/navigation-menu"
 import { ArrowRight, Facebook, Instagram, Linkedin, Menu, ReceiptText, Search, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 const HomePage = () => {
+  const services = [
+  {
+    title: "Mediation",
+    href: "/services#mediation",
+   
+  },
+  {
+    title: "Family Case",
+    href: "/services#family",
+  
+  },
+  {
+    title: "Succession",
+    href: "/services#succession",
+   
+  },
+  {
+    title: "Tax",
+    href: "/services#tax",
+
+  },
+  {
+    title: "Employment Law",
+    href: "/services#employment",
+
+  },
+  {
+    title: "Contract",
+    href: "/services#contract",
+   
+  },
+  {
+    title: "View All",
+    href: "/services",
+   
+  },
+]
   return (
     <div>
         <div className='fixed w-full py-1 px-10 md:px-20 flex items-center justify-between bg-white z-30 rounded-b-xl'>
             <h1 className='text-3xl text-primary font-bold'>Sina Law</h1>
-            <div className='hidden md:flex items-center gap-10'>
-                <Link href='/' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out'>Home</Link>
-                <Link href='/services' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out'>Services</Link>
-                <Link href='/about' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out'>About</Link>
-                <Link href='/contact' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out'>Contact Us</Link>
-                <Link href='/workers' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out flex items-center gap-2'><Search />Gig Workers</Link>
-            </div>
             <div className='flex md:hidden'>
                             <Drawer>
                 <DrawerTrigger>
@@ -39,8 +78,8 @@ const HomePage = () => {
                   </DrawerHeader>
                   <div className='flex flex-col items-center gap-5'>
                 <Link href='/' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out'>Home</Link>
-                <Link href='/about' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out'>About</Link>
                 <Link href='/services' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out'>Services</Link>
+                <Link href='/about' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out'>About</Link>
                 <Link href='/contact' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out'>Contact Us</Link>
                 <Link href='/workers' className='bg-primary text-white p-2 rounded-xl  text-xl hover:font-bold transition ease-in-out flex items-center gap-2'><Search />Gig Workers</Link>
                  </div>
@@ -52,7 +91,39 @@ const HomePage = () => {
                 </DrawerContent>
               </Drawer>
             </div>
-        </div>
+            <div className='hidden md:flex items-center gap-10'>
+                <Link href='/' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out'>Home</Link>
+                 <NavigationMenu>
+                  <NavigationMenuList >
+                     <NavigationMenuItem>
+                          <NavigationMenuTrigger>
+                            <p className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out'>Services</p>
+                          </NavigationMenuTrigger>
+                          <NavigationMenuContent>
+                            <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+                              {services.map((component) => (
+                                <div
+                                  key={component.title}
+                                  
+                                  className='p-2 border-1 shadow-lg flex flex-col gap-2'
+                                  
+                                >
+                                  <h1 className='text-xl text-primary font-bold'>{component.title}</h1>
+                                 
+                                  <Link href={component.href} className='flex items-center gap-2 bg-primary text-white w-fit p-2 rounded-xl'>View Detail<ArrowRight/></Link>
+                                </div>
+                              ))}
+                            </ul>
+                          </NavigationMenuContent>
+                        </NavigationMenuItem>
+                  </NavigationMenuList>
+                </NavigationMenu>
+                <Link href='/about' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out'>About</Link>
+                <Link href='/contact' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out'>Contact Us</Link>
+                <Link href='/workers' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out flex items-center gap-2'><Search />Gig Workers</Link>
+             
+             </div>
+            </div>
         <div className='w-full h-screen landing pt-[15%] px-[5%] md:px-[20%]'>
          <h1 className='hidden md:block md:text-6xl '>Solving your <br/>problems head-on</h1>
          <h1 className='text-4xl md:hidden font-bold text-center my-[20%]'>Solving your problems head-on</h1>
