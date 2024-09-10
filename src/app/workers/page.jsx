@@ -123,11 +123,11 @@ const Workers = () => {
   return (
     <div className="w-full mx-auto mt-[20px] flex flex-col ">
       <div className="w-full flex flex-wrap items-center justify-between fixed top-0 z-30 bg-white border-b rounded-b-2xl px-[4%] md:px-[10%] py-3 shadow-md">
-      <Link href='/'><ArrowLeft fontWeight='bold' size={33} className="text-white bg-secondary font-bold p-1 rounded-full md:scale-200 cursor-pointer" /></Link>
-        <p className="text-secondary text-lg md:text-2xl font-bold flex items-center gap-6">Available Accountants</p>
+      <Link href='/'><ArrowLeft fontWeight='bold' size={33} className="text-white bg-primary font-bold p-1 rounded-full md:scale-200 cursor-pointer" /></Link>
+        <p className="text-primary text-lg md:text-2xl font-bold flex items-center gap-6">Available Lawyers</p>
         <Dialog className="flex-end">
           <DialogTrigger>
-            <Button className="flex items-center gap-3 bg-secondary hover:bg-secondary">Filter <FilterIcon className='hidden md:block'/></Button>
+            <Button className="flex items-center gap-3 bg-primary hover:bg-primary">Filter <FilterIcon className='hidden md:block'/></Button>
           </DialogTrigger>
           <DialogContent className="px-2 w-[96%] md:w-fit rounded-xl">
             <DialogHeader className="mx-auto">
@@ -196,7 +196,7 @@ const Workers = () => {
         </Dialog>
       </div>
   
-      {(!maidsData || !categoriesData)?<div className='pt-[40%] text-xl text-secondary font-bold mx-auto'>Loading Workers...</div>
+      {(!maidsData || !categoriesData)?<div className='pt-[40%] text-xl text-primary font-bold mx-auto'>Loading Lawyer...</div>
       :
             <div className="flex flex-wrap items-center justify-center gap-x-2 md:gap-x-8 gap-y-20 pt-[20%] md:pt-[15%] z-0 ">
         {filteredMaids.map((maid) => (

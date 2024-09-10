@@ -79,3 +79,15 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+.lawfocus{
+  background-image: url('/lawfocus.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.lawservice{
+  background-image: url('/lawservice.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

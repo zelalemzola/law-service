@@ -1,8 +1,8 @@
-import { EB_Garamond } from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 
 
-const inter = EB_Garamond({ subsets: ["latin"], weight:['400', '500', '600', '700', '800'] });
+const inter = Outfit({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
