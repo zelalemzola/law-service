@@ -104,12 +104,9 @@ const Services = () => {
                               {services.map((component) => (
                                 <div
                                   key={component.title}
-                                  
-                                  className='p-2 border-1 shadow-lg flex flex-col gap-2'
-                                  
+                                  className='p-2 border-1 shadow-lg flex flex-col gap-2' 
                                 >
                                   <h1 className='text-xl text-primary font-bold'>{component.title}</h1>
-                                 
                                   <Link href={component.href} className='flex items-center gap-2 bg-primary text-white w-fit p-2 rounded-xl'>View Detail<ArrowRight/></Link>
                                 </div>
                               ))}
@@ -121,10 +118,9 @@ const Services = () => {
                 <Link href='/about' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out'>About</Link>
                 <Link href='/contact' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out'>Contact Us</Link>
                 <Link href='/workers' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out flex items-center gap-2'><Search />Gig Workers</Link>
-             
+
              </div>
             </div>
-
         <div className='w-full py-[15%] md:py-[10%] px-[2%]'>
           <div className='flex flex-col gap-5 '>
             <div className=' flex flex-col gap-3 items-center' id='mediation'>
