@@ -150,7 +150,7 @@ const ContactPage = () => {
           <h1 className='text-primary text-4xl font-bold'>Meet Our Gig Workers</h1>
           <div className='flex flex-col md:flex-row items-center justify-between my-[2%] gap-5 md:gap-0'>
           <p className='text-lg md:w-[60%]'>We provide you with direct and expert legal careso that you can resolve issues early and amicably.so that you can resolve issues early and amicably.</p>
-          <Link href='/' className='bg-primary py-3 px-6 rounded-xl flex items-center gap-3 text-white'><Search/> Gig Workers</Link>
+          <Link href='/workers' className='bg-primary py-3 px-6 rounded-xl flex items-center gap-3 text-white'><Search/> Gig Workers</Link>
           </div>
              <hr className='w-full border-primary border-1 mb-[10%] md:mb-[5%]'/>
           <h1 className='text-primary text-4xl font-bold my-[5%]'>Contact Us</h1>
