@@ -136,7 +136,7 @@ const HomePage = () => {
              
            />
           <GradualSpacing
-             className="text-2xl md:hidden mt-[30%] text-center font-bold   font-display   tracking-[-0.1em]   md:leading-[5rem]"
+             className="text-3xl md:hidden mt-[40%] text-wrap text-center font-bold   font-display   tracking-[-0.1em]   md:leading-[5rem]"
              text={`Solving your problems head-on`}
            />
           <BlurIn
