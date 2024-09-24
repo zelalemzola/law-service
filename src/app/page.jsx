@@ -69,7 +69,7 @@ const HomePage = () => {
   return (
     <div>
         <div className='fixed w-full py-1 px-10 md:px-20 flex items-center justify-between bg-white z-30 rounded-b-xl'>
-            <h1 className='text-3xl text-primary font-bold'>Sina Law</h1>
+            <h1 className='text-3xl text-primary font-bold'>Sina Law Firm</h1>
             <div className='flex md:hidden'>
                             <Drawer>
                 <DrawerTrigger>
@@ -78,7 +78,7 @@ const HomePage = () => {
                 <DrawerContent>
                   <DrawerHeader>
                     <DrawerTitle className='text-3xl text-primary font-bold text-center'>
-                       Sina Law
+                       Sina Law Firm
                     </DrawerTitle>
                   </DrawerHeader>
                   <div className='flex flex-col items-center gap-5'>
@@ -152,7 +152,7 @@ const HomePage = () => {
           <h1 className='text-primary text-4xl md:text-6xl'>About <span className='text-secondary'>Our Firm</span></h1>
           
           <BlurFade delay={0.35} inView='true'>
-            <p className='text-lg text-center'>Sina  law firm is  established with the aim of serving clients needs. It majorly provides a quality legal advisory mediation and litigation service. Besed in Ethiopia. It established by prominent lawyer who served various corporate clients for over a decades.</p>
+            <p className='text-lg text-center'>Sina law firm is established with the aim of serving client’s needs. It majorly provides a quality legal advisory mediation and litigation service. Based in Ethiopia. It established by prominent lawyer who served various corporate clients for over a decades.</p>
           </BlurFade>
 
           
@@ -168,7 +168,7 @@ const HomePage = () => {
             <div className='md:w-[31%] p-3 py-6 bg-primary text-white flex flex-col gap-4 items-center rounded-xl shadow-xl'>
               <h1 className='text-2xl text-secondary font-bold'>We Train and Certify</h1>
               <p className='text-lg'>
-                We train and certify law graduated in mediation, substantive law principles, how to  deferences civil and criminal case, how to advise client in civil and criminal issue
+               We train and certify law graduates in mediation, substantive and procedural law principles and practice , how to litigate civil and criminal case, how to advise clients on civil and criminal issue
               </p>
             </div>
             <div className='md:w-[31%] p-3 py-6 bg-primary text-white flex flex-col gap-4 items-center rounded-xl shadow-xl'>
