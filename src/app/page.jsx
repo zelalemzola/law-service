@@ -352,7 +352,7 @@ const HomePage = () => {
           <Link  href='/services' className='mx-auto px-6 py-3 text-lg flex items-center gap-3 bg-primary w-fit text-white rounded-xl my-[3%] hover:bg-secondary transition duration-700 ease-in-out'>Learn More<ArrowRight/></Link>
         </div>
 
-           <div className='w-full md:h-screen py-[10%] md:py-[3%] px-[3%] bg-primary '>
+           <div className='w-full md:h-screen py-[10%] md:py-[3%]'>
               <Partners/>
            </div>
 
