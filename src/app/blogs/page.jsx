@@ -142,7 +142,7 @@ const Blogs = () => {
              
              </div>
             </div>
-      <h1 className="text-primary text-3xl md:text-4xl font-extrabold text-center py-[10%] md:py-[5%]">Latest Blog Posts</h1>
+      <h1 className="text-primary text-3xl md:text-4xl font-extrabold text-center py-[20%] md:py-[5%]">Latest Blog Posts</h1>
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
       {blogs.map((blog) => (
         <Link key={blog._id} href={`/blogs/${blog._id}`} className="relative group">

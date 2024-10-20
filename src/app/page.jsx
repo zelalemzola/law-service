@@ -28,6 +28,7 @@ import BlurIn from '@/components/magicui/blur-in'
 import { inView } from 'framer-motion'
 import BlurFade from '@/components/magicui/blur-fade'
 import { FadeText } from '@/components/magicui/fade-text'
+import Partners from '@/components/Partners'
 const HomePage = () => {
   const services = [
   {
@@ -350,6 +351,11 @@ const HomePage = () => {
           </div>
           <Link  href='/services' className='mx-auto px-6 py-3 text-lg flex items-center gap-3 bg-primary w-fit text-white rounded-xl my-[3%] hover:bg-secondary transition duration-700 ease-in-out'>Learn More<ArrowRight/></Link>
         </div>
+
+           <div className='w-full md:h-screen py-[10%] md:py-[3%] px-[3%] bg-primary '>
+              <Partners/>
+           </div>
+
         <div className='w-full md:h-screen py-[10%] md:py-[3%] px-[3%] bg-primary flex flex-col gap-10 md:gap-0 md:flex-row'>
          <div className='md:w-[50%] flex items-center md:items-start justify-center gap-8 flex-col'>
                   <FadeText

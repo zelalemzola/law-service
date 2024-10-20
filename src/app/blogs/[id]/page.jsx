@@ -154,7 +154,7 @@ const BlogDetails = () => {
              
              </div>
             </div>
-            <div className='py-[10%] md:py-[5%]'>
+            <div className='py-[20%] md:py-[5%]'>
       <img src={blog.thumbnailUrl} alt={blog.title} className="w-full h-[40vh] object-cover" />
       <h1 className=" mt-4 capitalize text-center text-primary font-bold text-3xl md:text-4xl">{blog.title}</h1>
       <div className='px-5 flex flex-col gap-4'>
