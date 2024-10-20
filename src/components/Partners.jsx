@@ -19,7 +19,7 @@ const Partners =()=>{
     <div className=' flex items-center flex-wrap flex-col md:flex-row place-content-center gap-10 py-10 px-10'>
       {partners.map((partner)=>(
         <div key={partner._id} className='flex items-center justify-evenly p-2 shadow-md border-t  shadow-secondary  rounded-2xl w-[80%] md:w-[30%]'>
-          <h2 className='text-lg text-secondary font-bold'>{partner.name}</h2>
+          <h2 className='text-lg text-primary font-bold'>{partner.name}</h2>
           <Image src={partner.photoUrl} alt={partner.name} width={140} height={140} className='rounded-full border-t  shadow-md shadow-secondary'/>
         </div>
       ))}
