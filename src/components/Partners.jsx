@@ -20,7 +20,7 @@ const Partners =()=>{
       {partners.map((partner)=>(
         <div key={partner._id} className='flex items-center justify-evenly p-2 shadow-md border-t  shadow-secondary  rounded-2xl w-[80%] md:w-[30%]'>
           <h2 className='text-lg text-primary font-bold'>{partner.name}</h2>
-          <Image src={partner.photoUrl} alt={partner.name} width={140} height={140} className='rounded-full border-t  shadow-md shadow-secondary'/>
+          <Image src={partner.photoUrl} alt={partner.name} width={140} height={140} className='rounded-full border-t  shadow-md shadow-primary'/>
         </div>
       ))}
     </div>
