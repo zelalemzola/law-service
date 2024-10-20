@@ -1,3 +1,7 @@
+'use client'
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+import { useParams } from 'next/navigation';
 import { ArrowRight, Facebook, Instagram, Linkedin, Menu, ReceiptText, Search, Twitter } from 'lucide-react';
 import React from 'react'
 import {
@@ -23,8 +27,8 @@ import {
 
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-const ContactPage = () => {
-      const services = [
+const BlogDetails = () => {
+       const services = [
   {
     title: "Mediation",
     href: "/services#mediation",
@@ -61,9 +65,33 @@ const ContactPage = () => {
    
   },
 ]
+  const [blog, setBlog] = useState(null);
+  const [error, setError] = useState(null); // To handle errors
+  const params = useParams(); // Get the parameters from the URL
+  const { id } = params; // Extract the blog ID from params
+
+  useEffect(() => {
+    const fetchBlog = async () => {
+      if (id) {
+        try {
+          const response = await axios.get(`/api/blogs/${id}`);
+          setBlog(response.data.blog); // Update state with fetched blog
+        } catch (error) {
+          setError('Error fetching blog'); // Handle error
+          console.error("Error fetching blog:", error);
+        }
+      }
+    };
+
+    fetchBlog();
+  }, [id]);
+
+  if (error) return <div>{error}</div>; // Show error if any
+  if (!blog) return <div className='flex items-center justify-center h-screen text-lg text-primary'>Loading...</div>; // Loading state
+
   return (
-    <div>
-          <div className='fixed w-full py-1 px-10 md:px-20 flex items-center justify-between bg-white z-30 rounded-b-xl'>
+    <div className='pb-10'>
+       <div className='fixed w-full py-1 px-10 md:px-20 flex items-center justify-between bg-white z-30 rounded-b-xl shadow-xl'>
             <h1 className='text-3xl text-primary font-bold'>Sina Law</h1>
             <div className='flex md:hidden'>
                             <Drawer>
@@ -126,48 +154,19 @@ const ContactPage = () => {
              
              </div>
             </div>
-         <div className='w-full md:h-screen py-[20%] md:py-[10%] px-[3%] bg-primary flex flex-col gap-10 md:gap-0 md:flex-row'>
-         <div className='md:w-[50%] flex items-center md:items-start justify-center gap-8 flex-col'>
-            <h1 className='text-white text-3xl font-bold'>Let's Talk</h1>
-            <p className='bg-white p-2 w-[80%] text-black text-center rounded-2xl '>Addis Ababa, Bole Atlas</p>
-            <p className='bg-white p-2 w-[80%] text-black text-center rounded-2xl '>0943902245</p>
-            <p className='bg-white p-2 w-[80%] text-black text-center rounded-2xl '>abrillawfirm@gmail.com</p>
-          
-         </div>
-         <div className='md:w-[50%] flex items-center md:items-start justify-center flex-col gap-10 '>
-             <h1 className='text-white text-3xl font-bold'>Business Hours</h1>
-             <div className='bg-white p-5 text-black flex flex-col items-start gap-5 rounded-xl w-[70%] text-center shadow-2xl'>
-              <p className='text-lg '>Monday to Friday</p>
-              <p className='text-lg '>2:30 - 11:30LT</p>
-              <p className='text-lg '>Saturday</p>
-              <p className='text-lg '>2:30 - 5:30LT</p>
-              <p className='text-lg '>We work on sundays for clients who only have appointments</p>
-              
-             </div>
-         </div>
-        </div>
-        <div className='w-full py-[5%] px-[5%]'>
-          <h1 className='text-primary text-5xl font-bold mb-[2%] md:mb-[5%]'>Sina Law</h1>
-             <hr className='w-full border-primary border-1 mb-[10%] md:mb-[5%]'/>
-          <h1 className='text-primary text-4xl font-bold'>Meet Our Gig Workers</h1>
-          <div className='flex flex-col md:flex-row items-center justify-between my-[2%] gap-5 md:gap-0'>
-          <p className='text-lg md:w-[60%]'>We provide you with direct and expert legal careso that you can resolve issues early and amicably.so that you can resolve issues early and amicably.</p>
-          <Link href='/workers' className='bg-primary py-3 px-6 rounded-xl flex items-center gap-3 text-white'><Search/> Gig Workers</Link>
-          </div>
-             <hr className='w-full border-primary border-1 mb-[10%] md:mb-[5%]'/>
-          <h1 className='text-primary text-4xl font-bold my-[5%]'>Contact Us</h1>
-          <div className='flex items-center text-2xl  gap-20 flex-wrap my-[2%] px-[1%]'>
-            <Instagram className='text-lg text-white bg-primary p-1  font-bold scale-[200%]' />
-            <Facebook  className='text-lg text-white bg-primary p-1   font-bold scale-[200%]' />
-            <Twitter   className='text-lg text-white bg-primary p-1   font-bold scale-[200%]' />
-            <Linkedin  className='text-lg text-white bg-primary p-1  font-bold scale-[200%]' />
-
-          </div>
-        </div>
-      
-
+            <div className='py-[10%] md:py-[5%]'>
+      <img src={blog.thumbnailUrl} alt={blog.title} className="w-full h-[40vh] object-cover" />
+      <h1 className=" mt-4 capitalize text-center text-primary font-bold text-3xl md:text-4xl">{blog.title}</h1>
+      <div className='px-5 flex flex-col gap-4'>
+      <p className="mt-2 text-gray-400"><span className='text-primary text-lg font-semibold'>Date: </span> {new Date(blog.date).toLocaleDateString()}</p>
+      <div className="mt-4 ">{blog.content}</div>
+      </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default ContactPage
+export default BlogDetails;
+
+
+

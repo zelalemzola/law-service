@@ -86,6 +86,7 @@ const HomePage = () => {
                 <Link href='/services' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out'>Services</Link>
                 <Link href='/about' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out'>About</Link>
                 <Link href='/contact' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out'>Contact Us</Link>
+                <Link href='/blogs' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out'>Blogs</Link>
                 <Link href='/workers' className='bg-primary text-white p-2 rounded-xl  text-xl hover:font-bold transition ease-in-out flex items-center gap-2'><Search />Gig Workers</Link>
                  </div>
                   <DrawerFooter>
@@ -125,6 +126,7 @@ const HomePage = () => {
                 </NavigationMenu>
                 <Link href='/about' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out'>About</Link>
                 <Link href='/contact' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out'>Contact Us</Link>
+                <Link href='/blogs' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out'>Blogs</Link>
                 <Link href='/workers' className='text-primary hover:underline hover:decoration-secondary duration-800 hover:decoration-3 text-xl hover:font-bold transition ease-in-out flex items-center gap-2'><Search />Gig Workers</Link>
              
              </div>
@@ -236,7 +238,7 @@ const HomePage = () => {
                </Drawer>
             </div>
            </BlurFade>
-            <BlurFade delay={0.30} inView='true'className='md:w-[35%] bg-primary p-3 flex flex-col gap-3 rounded-xl'>
+            <BlurFade delay={0.30} inView='true' className='md:w-[35%] bg-primary p-3 flex flex-col gap-3 rounded-xl'>
             <div >
               <h1 className='text-2xl text-white font-bold'>Contract</h1>
 
