@@ -13,6 +13,7 @@ import {
   DrawerTrigger,
 } from "@/components/ui/drawer";
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 
 const Blogs = () => {
   const services = [

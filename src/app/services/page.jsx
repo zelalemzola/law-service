@@ -22,6 +22,7 @@ import {
   NavigationMenuTrigger,
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu"
+import Image from 'next/image';
 
 const Services = () => {
   const services = [
