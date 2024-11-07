@@ -155,7 +155,7 @@ const HomePage = () => {
           <h1 className='text-primary text-4xl md:text-6xl'>About <span className='text-secondary'>Our Firm</span></h1>
           
           <BlurFade delay={0.35} inView='true'>
-            <p className='text-lg text-center'>Sina law firm is established with the aim of serving client’s needs. It majorly provides a quality legal advisory mediation and litigation service. Based in Ethiopia. It established by prominent lawyer who served various corporate clients for over a decades.</p>
+            <p className='text-lg text-center'>Sina law office gives affordable and quality service with the aim of serving client’s needs. We majorly provide a quality legal advocacy mediation and litigation service. Based in Ethiopia. It established by prominent lawyer who served various corporate clients for over decade. Established according to Ethiopian Federal advocacy service licensing and administration proclamation No 1249/20221</p>
           </BlurFade>
 
           
@@ -177,14 +177,12 @@ const HomePage = () => {
             <div className='md:w-[31%] p-3 py-6 bg-primary text-white flex flex-col gap-4 items-center rounded-xl shadow-xl'>
               <h1 className='text-2xl text-secondary font-bold'>Provide gig workers</h1>
               <p className='text-lg'>
-                We train and certify law graduated in mediation, substantive law principles, how to  deferences civil and criminal case, how to advise client in civil and criminal issue
-              </p>
+ After we trained and certified law graduates in mediation, substantive and procedural law principles and practice , how to litigate  civil and criminal case, how to advise client on civil and criminal issue we provide job opportunity and great service for our clients.               </p>
             </div>
             <div className='md:w-[31%] p-4 py-6 bg-primary text-white flex flex-col gap-4 items-center rounded-xl shadow-xl'>
               <h1 className='text-2xl text-secondary font-bold'>Tailored Solutions </h1>
               <p className='text-lg'>
-                We train and certify law graduated in mediation, substantive law principles, how to  deferences civil and criminal case, how to advise client in civil and criminal issue
-              </p>
+We train and certify law graduates in mediation, substantive and procedural law principles and practice, how to litigate civil and criminal case, how to advise client on civil and criminal issue. They also available and on time for gig works and to clients whenever and where ever they are needed.               </p>
             </div>
            
           </div>
@@ -214,8 +212,7 @@ const HomePage = () => {
             <div >
               <h1 className='text-2xl text-white font-bold'>Mediation</h1>
               <p className='text-white '>
-                 As a neutral third party we assist you in reaching a mutually acceptable resolution. focus on collaboration and communication allowing parties to express thier concern and interests.
-              </p>
+                We provide qualified mediators who provide quality mediation service which will help the party in reaching a mutually acceptable resolution with focusing on party autonomy, collaboration and communication allowing parties to express their concern and interest.              </p>
                <Drawer>
                  <DrawerTrigger className='flex items-center gap-3 bg-white p-2 w-fit rounded-xl mx-auto'>Breif Detial <ReceiptText /></DrawerTrigger>
                  <DrawerContent>
@@ -244,7 +241,7 @@ const HomePage = () => {
               <h1 className='text-2xl text-white font-bold'>Contract</h1>
 
               <p className='text-white '>
-                We prepare an agreement  and advice you about how to establish your company legaly  and  represent you as a legal attorney in court room <br/>.......
+                We prepare any legal binding contractual agreement and advice our clients on the performance of the contract and represent them as a legal attorney in court for cases regarding any contractual conflicts and breeches.<br/>.......
               </p>
                <Drawer>
                  <DrawerTrigger className='flex items-center gap-3 bg-white p-2 w-fit rounded-xl mx-auto'>Breif Detial <ReceiptText /></DrawerTrigger>
@@ -256,8 +253,8 @@ const HomePage = () => {
                    </DrawerHeader>
                    <div className='w-[70%] mx-auto'>
                    <p className='text-black text-xl'>
-                   We prepare an agreement  and advice you about how to establish your company legaly  and  represent you as a legal attorney in court room.
-                  </p>
+                      When clients come to get our services regarding contractual issues, we provide the legal framework for Ethiopian contractual laws and other laws and regulations as to the client&lsquo;s need. Our service regarding contract law extends up to resolving any conflicts arising from the contractual agreement by litigation arbitration or mediation.         
+           </p>
                     </div>
                    <DrawerFooter>
                      
@@ -273,8 +270,8 @@ const HomePage = () => {
             <div >
               <h1 className='text-2xl text-white font-bold'>Commercial Law</h1>
               <p className='text-white '>
-                 You gain a dedicated advocate who is commited to your success equipped with the expertise. And resources necessary to navigate the complexities of commercial legal matters effectively...
-              </p>
+                We provide any commercial law needs of our clients according to Ethiopian commercial laws which include establishing and dissolving business organization also we consult our clients on laws that govern business organizations in Ethiopia. 
+               </p>
                <Drawer>
                  <DrawerTrigger className='flex items-center gap-3 bg-white p-2 w-fit rounded-xl mx-auto'>Breif Detial <ReceiptText /></DrawerTrigger>
                  <DrawerContent>
@@ -285,8 +282,8 @@ const HomePage = () => {
                    </DrawerHeader>
                    <div className='w-[70%] mx-auto'>
                    <p className='text-black text-xl'>
-                   You gain a dedicated advocate who is commited to your success equipped with the expertise. And resources necessary to navigate the complexities of commercial legal matters effectively
-                  </p>
+                      Ethiopia updated its commercial code for the purpose of governing the fast growing economic and business environment. We provide up to date business law advocacy for our clients.  These advocacy services include all business laws and practices that arse from performing as a business owner or business organization in Ethiopia.     
+                                   </p>
                     </div>
                    <DrawerFooter>
                      
@@ -367,7 +364,7 @@ const HomePage = () => {
               text="Let's Talk"
             />
               <BlurFade delay={0.44} inView='true' className='bg-white p-2 w-[80%] text-black text-center rounded-2xl '>
-            <p >Addis Ababa, Bole Atlas</p>
+            <p className='text-wrap'>Addis Ababa, Megenagna ,Bethlehem plaza 7 floor </p>
             </BlurFade>
               <BlurFade delay={0.48} inView='true' className='bg-white p-2 w-[80%] text-black text-center rounded-2xl '>
             <p >0943902245</p>
