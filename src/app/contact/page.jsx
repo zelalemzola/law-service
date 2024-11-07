@@ -64,7 +64,7 @@ const ContactPage = () => {
   return (
     <div>
           <div className='fixed w-full py-1 px-10 md:px-20 flex items-center justify-between bg-white z-30 rounded-b-xl'>
-            <h1 className='text-3xl text-primary font-bold'>Sina Law</h1>
+            <Link href='/'><Image src='/sinalogo.png' alt='logo' width={150} height={80}/></Link>
             <div className='flex md:hidden'>
                             <Drawer>
                 <DrawerTrigger>
